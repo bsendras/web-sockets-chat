@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="styles.css" >
+</head>
+<body>
+    <div class="grid-container">
+        <div class="connection-controls flex-container row">
+            <button id="button-connect" class="input-button-connection">Conectar</button>
+            <button id="button-disconnect" class="input-button-connection">Desconectar</button>
+        </div>
+        <div class="grid-item flex-container column room">
+            <div id="client-status" class="status"></div>
+            <div id="chat-box" class="flex-item flex-container column chat">
+                <!-- Chat -->
+            </div>
+            <form class="flex-item flex-container column controls">
+                <div class="message-controls flex-container row">
+                    <input id="input-message" class="input-text" type="text" placeholder="Escribe un mensaje">
+                    <button id="button-send" class="input-button">Enviar a todos</button>
+                    <button id="button-send-room" class="input-button">Enviar a sala</button>
+                </div>
+                <div class="room-controls flex-container row">
+                    <input id="input-room" class="input-text" type="text" placeholder="Id de la sala">
+                    <button id="button-join" class="input-button">Unirse</button>
+                    <button id="button-leave" class="input-button">Abandonar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
